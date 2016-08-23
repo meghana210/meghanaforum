@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   
-
 </script>
 <title>forum</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,7 +23,7 @@
     
    
   <div id="main">
-    <form action="logincheck.php" method="POST">
+<form action="logincheck.php" method="post">
 <p><label>User Name : </label>
 <input id="username" type="text" name="username" placeholder="username" /></p>
 <p><label>Password  : </label>

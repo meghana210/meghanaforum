@@ -7,22 +7,22 @@ $dbname = "meghana";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+// echo "Connected successfully";
+//$id = $_POST['id'];
+//$username = $_POST['username'];
+//$password = $_POST['password'];
 
-$id = (isset($_POST['id']) ? $_POST['id'] : '');
-$username = (isset($_POST['$username']) ? $_POST['username'] : '');
-$password = (isset($_POST['$password']) ? $_POST['password'] : '');
 
-$sql = "INSERT INTO details ( id,username, password)
- VALUES ( '$id', '$username', '$password', )";
+// $sqli = "INSERT INTO details (username, password)
+//  VALUES ( '".$username."', '".$password."' )";
 
 // if (mysqli_query($conn, $sqli)) {
-//     echo "New record created successfully";
-// } 
+//      echo "New record created successfully";
+//  } 
 
 
- //mysqli_close($conn);
+//  mysqli_close($conn);
 ?>

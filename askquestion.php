@@ -1,27 +1,4 @@
-<?php 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "meghana";
-$tablename="users";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-   $id = (isset($_POST['$id']) ? $_POST['id'] : '');
-   $Tittle= (isset($_POST['$Tittle']) ? $_POST['Tittle'] : '');
-   $Topic= (isset($_POST['$Topic']) ? $_POST['Topic'] : '');
-   $Detail= (isset($_POST['$Detail']) ? $_POST['Detail'] : '');
 
-$sql = "INSERT INTO users (id,Tittle,Topic, Detail)
-VALUES ( '".$id."', '".$Tittle."', '".$Topic."', '".$Detail."')";
-
-echo "successfully";
-
- ?>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -39,14 +16,14 @@ echo "successfully";
 
 	?>
 	<br> <br>
-<form action="question.php" method="post">
+<form action="main.php" method="post" name="askqns">
   Tittle:<br>
-  <input type="textarea" name="Tittle"><br>
+  <input type="textarea" name="title"><br>
   Topic:<br>
-  <input type="textarea" name="Topic"><br>
+  <input type="textarea" name="topic"><br>
   Detail:<br>
- 	<textarea class="tinymce" name="Detail"></textarea>
+ 	<textarea class="tinymce" name="detail"></textarea>
  	<br> <br>
-  <input type="button" value="submit" class="homebutton" id="btnHome" onClick="Javascript:window.location.href = 'question.php';" >
+  <input type="submit" value="submit" name="submit">
 </form>
 </html>
